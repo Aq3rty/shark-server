@@ -6,13 +6,11 @@ const path = require("path");
 const app = express();
 const server = http.createServer(app);
 const io = new Server(server, {
-  cors: {
-    origin: "*"
-  }
+  cors: { origin: "*" }
 });
 
 // Логи
-console.log("Shark server started");
+console.log("Shark Server started");
 
 // Socket.io
 io.on("connection", socket => {
